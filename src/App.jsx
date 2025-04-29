@@ -25,19 +25,35 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h2>TodoList</h2>
-      <input className="border-2 rounded p-2"
+    <div className="p-4">
+      <h2 className="text-xl font-bold mb-4">TodoList</h2>
+      <input
+        className="border-2 rounded p-2 text-black bg-blue-100"
         type="text"
         value={input}
         placeholder="Yangi vazifa"
         onChange={(e) => setInput(e.target.value)}
       />
-      <button className="border-2 rounded p-2 m-2 text-amber-500" onClick={addTodo}>Qo'shish</button>
-      <ul>
+      <button
+        className="border-2 rounded p-2 m-2 text-green-500"
+        onClick={addTodo}
+      >
+        Qo'shish
+      </button>
+
+      <ul className="mt-4 space-y-2">
         {todos.map((todo, index) => (
-          <li key={index}>
-            {todo} <button className="border-2 rounded p-1 text-red-600" onClick={() => deleteTodo(index)}>O‘chirish</button>
+          <li
+            key={index}
+            className="flex items-center justify-between bg-gray-100 p-2 rounded"
+          >
+            <span>{todo}</span>
+            <button
+              className="border-2 rounded p-1 text-red-600"
+              onClick={() => deleteTodo(index)}
+            >
+              O‘chirish
+            </button>
           </li>
         ))}
       </ul>
