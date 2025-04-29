@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
