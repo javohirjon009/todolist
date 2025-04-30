@@ -28,14 +28,14 @@ const App = () => {
     <div className="p-4">
       <h2 className="text-xl font-bold mb-4">TodoList</h2>
       <input
-        className="border-2 rounded p-2 text-black bg-blue-100"
+        className="border-2 rounded p-2 text-black bg-blue-100 w-100"
         type="text"
         value={input}
-        placeholder="Yangi vazifa"
+        placeholder="Biror nima kiriting . ."
         onChange={(e) => setInput(e.target.value)}
       />
       <button
-        className="border-2 rounded p-2 m-2 text-green-500"
+        className="border-2 rounded p-2 m-2 text-green-500 hover:text-green-300 cursor-pointer"
         onClick={addTodo}
       >
         Qo'shish
@@ -49,7 +49,7 @@ const App = () => {
           >
             <span>{todo}</span>
             <button
-              className="border-2 rounded p-1 text-red-600"
+              className="border-2 rounded p-1 text-red-600 hover:text-red-400 cursor-pointer"
               onClick={() => deleteTodo(index)}
             >
               O‘chirish
