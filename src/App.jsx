@@ -51,7 +51,7 @@ const App = () => {
           className="flex-1 border-2 rounded p-2 text-black bg-blue-100"
           type="text"
           value={input}
-          placeholder="Yangi vazifa"
+          placeholder="Biror nima kiriting . ."
           onChange={(e) => setInput(e.target.value)}
         />
         <button
